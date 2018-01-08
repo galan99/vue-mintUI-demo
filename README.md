@@ -21,6 +21,10 @@
 
 ## 执行命令
 
+通过npm安装本地服务第三方依赖模块(需要已安装Node.js)，使用npm安装依赖模块可能会很慢，建议换成cnpm<br/>
+
+npm install -g cnpm --registry=http://registry.npm.taobao.org<br/>
+
 > npm install </br>
 
 > npm run dev </br>
