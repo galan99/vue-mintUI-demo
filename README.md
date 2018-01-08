@@ -4,6 +4,32 @@
 
 > UI采用的是[Mint UI](http://mint-ui.github.io/#!/zh-cn)，基于 Vue.js 的移动端组件库
 
+> 要想统一处理所有http请求和响应，就得用上 axios 的拦截器。通过配置http response inteceptor，当后端接口返回-555 （未授权），让用户重新登录。
+
+```code
+axios.interceptors.request.use(function (config) {
+    return config;
+}, function (error) {
+    return Promise.reject(error);
+});
+
+//请求完成
+axios.interceptors.response.use(function (response) {
+    if(response.data.code == -555){
+        //未登录
+        router.replace({
+            path: 'login',
+            query: {path: router.currentRoute.fullPath.slice(1)}
+        })
+    }
+    return response;
+}, function (error) {
+    return Promise.reject(error);
+});
+```
+
+通过上面这两步，就可以在前端实现登录拦截了。登出功能也就很简单，只需要把当前token清除，再跳转到首页即可。
+
 > 如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
 
 # 说明 
