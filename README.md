@@ -1,5 +1,6 @@
 # vue-mintUI-demo
 
+> 利用vue2、mockjs实现前后分离，开发时vue-cli proxyTable 可以解决开发环境的跨域问题，所以针对没有接口数据时采用mockjs方法，有接口时采用修改vue-cli的config文件里index.js的参数proxyTable来开发。
 > UI采用的是[Mint UI](http://mint-ui.github.io/#!/zh-cn)，基于 Vue.js 的移动端组件库
 > 如果对您有帮助，您可以点右上角 "Star" 支持一下 谢谢！ ^_^
 
