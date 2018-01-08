@@ -1,0 +1,161 @@
+﻿body,div,span,h1,h2,h3,h4,h5,h6,p,a,code,em,img,q,small,blockquote,strong,dd,dl,dt,li,ol,ul,form,label,table,tbody,tr,th,td,input{margin:0;padding:0;border:0}
+body{font-size:.28rem;max-width:1080px;margin:0 auto;background:#f6f6f6;font-family:'STHeiti','Microsoft YaHei',Helvetica,Arial,sans-serif;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+h1,h3,h4,h5,h6,h2{font-weight: normal;}
+em,b,s{font-style: normal;}
+a,a:active,a:hover,a:focus,a:visited{text-decoration:none}
+a,img{-webkit-touch-callout:none}
+li{list-style:none}
+textarea,input[type="password"],input[type="text"]{resize:none;outline:0;-webkit-appearance:none;white-space:pre-wrap;word-wrap:break-word;background:#fff}
+.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+html{-webkit-text-size-adjust: 100%;}
+body{width:7.5rem}
+input {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+img { 
+    max-width: 100%; 
+    border:none; 
+    vertical-align:middle; 
+}
+/*box*/
+.dbox{
+    display: -webkit-box;
+    display: box;
+    display: -webkit-flex;
+    display: flex;
+}
+.box-justify {
+    display: -webkit-box;
+    display: box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.box-center {
+    display: -webkit-box;
+    display: box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.flex {
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;   
+}
+.elli{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*load*/
+.zz{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 9999;
+}
+.zz>p{
+    position: absolute;
+    left: 0;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.loading{
+    width: 30px;
+    height: 30px;
+    border: 1px #fff solid;
+    border-radius: 50%;
+    -webkit-animation: rotation 1s ease-in-out infinite;
+    -moz-animation: rotation 1s ease-in-out infinite;
+    animation: rotation 1s ease-in-out infinite;
+    margin: 130px auto;
+}
+.loading:after{
+    width: 5px;
+    height: 5px;
+    background-color: rgba(255,255,255,1);
+    border-radius: 100%;
+    position: absolute;
+    content: "";
+}
+@-webkit-keyframes rotation{
+    0%{-webkit-transform: rotate(0deg);}
+    100%{-webkit-transform: rotate(360deg);}
+}
+@keyframes rotation{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+/*提示语*/
+.cmTips{
+    position:fixed;
+    left:0;
+    right:0;
+    top:10px;
+    z-index:99;
+    padding:20px 20px 5px;
+    text-align:center;
+    z-index:99999;
+    color:#fff;
+    overflow:hidden;
+    display:-webkit-box;
+    display:box;
+    -webkit-transform:translateY(-100%);
+    transform:translateY(-100%);
+    -webkit-transition-delay:1s;
+    transition-delay: 1s;
+    -webkit-transition-duration:.5s;
+    transition-duration:.5s;
+    -webkit-transition-duration:500ms;
+    transition-duration:500ms;
+}
+.cmTips p{
+    min-width:150px;
+    padding:5px 20px;
+    margin:0 auto;
+    border-radius:5px;
+    box-shadow:0 1px 2px rgba(0,0,0,.8);
+    background:rgba(0,0,0,.8);
+    font-size:14px;
+    line-height:30px;
+}
+.cmTips{-webkit-animation:tips .5s linear both,tipsHide .5s 3s linear forwards;/*animation:tips .5s linear both,tipsHide .5s 3s linear forwards;*/}
+@-webkit-keyframes tips{from {-webkit-transform:translateY(-100%);opacity:0}to { -webkit-transform:translateY(0%);opacity:1;}}
+@keyframes tips{from{-webkit-transform:translateY(-100%);opacity:0}to{ -webkit-transform:translateY(0%);opacity:1;}}
+@-webkit-keyframes tipsHide{from{-webkit-transform:translateY(0%);opacity:1}to{-webkit-transform:translateY(-100%);opacity:0;}}
+@keyframes tipsHide{from{-webkit-transform:translateY(0%);opacity:1}to{-webkit-transform:translateY(-100%);opacity:0;}}
+
+.page-infinite-loading,.nomore{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    color:#666;   
+}
+.page-infinite-loading .mint-spinner-fading-circle{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+body,html{
+    -webkit-overflow-scrolling: touch;
+}
+.mint-toast{
+    min-width: 3rem;
+}
