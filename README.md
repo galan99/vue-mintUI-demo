@@ -25,7 +25,7 @@
 
 npm install -g cnpm --registry=http://registry.npm.taobao.org<br/>
 
-> npm install </br>
+> cnpm install </br>
 
 > npm run dev </br>
 
