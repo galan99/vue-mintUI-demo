@@ -10,14 +10,20 @@
 ## 技术栈
 
 > vue </br>
+
 > vue-router </br>
+
 > axios </br>
+
 > mockjs </br>
+
 > webpack </br>
 
 ## 执行命令
 
 > npm install </br>
+
 > npm run dev </br>
+
 > npm run build </br>
 
